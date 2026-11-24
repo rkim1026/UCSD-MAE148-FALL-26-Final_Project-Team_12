@@ -1,0 +1,20 @@
+# ROS / colcon
+build/
+install/
+log/
+.venv/
+*.pyc
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# Models / bags / local data
+*.bag
+*.db3
+*.h5
+*.onnx
+go_wait.json
+data/
+models/
+bags/

@@ -1,0 +1,46 @@
+/**:
+  ros__parameters:
+    # --- Track geometry (measure on your floor; examples from the build guide) ---
+    island_radius: 0.95
+    lane_center_radius: 1.30
+    outer_radius: 1.65
+    # Ring centre in the LiDAR frame when stopped at the yield line.
+    center_x: 0.0
+    center_y: 1.30
+    conflict_angle: 0.0
+
+    # --- Gap acceptance (measure T_clear on the car: slowest of 10 runs) ---
+    t_clear: 1.5
+    margin: 0.5
+    go_scans_required: 3
+    cruise_speed: 0.80
+    merge_speed: 0.50
+    follow_min_gap: 0.40
+    follow_full_gap: 1.20
+    estop_distance: 0.25
+    min_cluster_points: 3
+
+    # --- Lane follower ---
+    kp: 0.8
+    ki: 0.0
+    kd: 0.05
+    wheelbase: 0.33
+    lane_radius: 1.30
+    use_feedforward: true
+
+    # --- Yield / exit tape ---
+    stop_row_frac: 0.78
+
+    # --- Topics (UCSD Robocar defaults) ---
+    image_topic: /camera/color/image_raw
+    scan_topic: /scan
+    cmd_vel_topic: /cmd_vel
+    steering_topic: /lane_steering
+    speed_topic: /row_speed
+    hold_to_run_topic: /joy_enable
+    require_enable: true
+    publish_hz: 20.0
+
+    # --- Optional learned veto ---
+    use_classifier_veto: false
+    classifier_path: ""
